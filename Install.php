@@ -3,7 +3,7 @@ namespace Chack1172\Core;
 
 class Install
 {
-    const CORE_VERSION = '1.0.1'; 
+    const CORE_VERSION = '1.0.2'; 
 
     private $pluginCode = '';
     private $prefix = '';

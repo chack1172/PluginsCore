@@ -8,7 +8,7 @@ class Loader
 
     public static function register()
     {
-        spl_autoload_register([self, 'loadClass'], true);
+        spl_autoload_register([__CLASS__, 'loadClass'], true);
     }
 
     public static function registerNamespace(string $namespace = '', string $path)
