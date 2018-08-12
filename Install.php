@@ -3,7 +3,7 @@ namespace Chack1172\Core;
 
 class Install
 {
-    const CORE_VERSION = '1.1.0'; 
+    const CORE_VERSION = '1.1.1'; 
 
     private $pluginCode = '';
     private $prefix = '';
@@ -28,9 +28,7 @@ class Install
         $coreVersion = explode('.', self::CORE_VERSION);
         $pluginVersion = explode('.', $this->pluginInfo['core_version']);
         if (count($coreVersion) >= 2 && count($pluginVersion) >= 2) {
-            if ($coreVersion[0] > $pluginVersion[0]) {
-                return true;
-            } elseif ($coreVersion[0] == $pluginVersion[0] && $coreVersion[1] >= $pluginVersion[1]) {
+            if ($coreVersion[0] == $pluginVersion[0] && $coreVersion[1] >= $pluginVersion[1]) {
                 return true;
             }
         }
